@@ -1,0 +1,106 @@
+/* CSS declarations go here */
+
+.entry_logo{ margin:0 15px; position:relative; top:-5px;}
+.entry_logo img{ width:154px;}
+.logo{ margin:0 15px; position:relative; vertical-align: middle; top:5px;}
+.logo img{ width:154px;}
+.nav>li>a:focus, .nav>li>a:hover{text-decoration: none;color:#458b00; background:none;}
+.nav>li>a {padding:15px 10px 10px 10px; text-decoration: none;color: #818181;display: block;transition: 0.3s}
+.title {padding:15px 10px 10px 10px; text-decoration: none;display: block;transition: 0.3s}
+.modal-header>a {text-decoration: none;color: #458b00}
+.modal-header>a:focus, .modal-header>a:hover{text-decoration: none;color:#818181; background:none;}
+.banner_logo{ min-width:200px; min-height:300px; position:relative;}
+
+
+div.opacity90gray {
+  background:#dddddd;
+  opacity: 0.9;
+  border-radius:4px;
+  align-items: center;
+  justify-content: center;
+  height: 380px;
+  width: 580px;
+  padding: 10px 10px 10px 10px;
+}
+
+div.well {
+  background:#ffffff;
+  border-radius:4px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px 0px 10px;
+}
+div.well>h4{
+	font-size:24px;
+	font-family:'nhg-display-bold';
+}
+
+div.login {
+  height: 318px;
+  width: 600px;
+  align-items: center;
+  justify-content: center;
+}
+
+#main_container{
+  width:100%;
+  min-width: 800px;
+}
+
+#header{
+  font-size:24px;
+  font-family:'nhg-display-bold';
+}
+
+#entry{
+  position:absolute;
+  top:60px;
+  right:10px;
+  left:10px;
+  bottom:40px;
+  padding:0px 0px;
+  min-width: 500px;
+  min-height: 600px;
+  background:none;
+  border-radius:4px;
+  z-index:1;
+  align-items: center;
+  justify-content: center;
+}
+
+#entry_row{
+  position:absolute;
+  padding:0px 0px;
+  min-width: 500px;
+  min-height: 380px;
+  border-radius:4px;
+  z-index:1;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+}
+
+#entry_photo1{
+  background-image: url("img/rotate_1.jpg");
+  min-width:200px; 
+  min-height:300px;
+}
+
+#entry_photo2{
+  background-image: url("img/rotate_2.jpg");
+  min-width:200px; 
+  min-height:300px;
+}
+
+#footer{
+	width:100%;
+	font-size:13px;
+	font-family:'nhg-display-bold';
+	vertical-align: bottom;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

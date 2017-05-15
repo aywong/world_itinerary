@@ -1,0 +1,66 @@
+<template name="profile">
+	<div id="main_container">
+		<div class="container-fluid">
+			<div class="row content">							
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="well">
+							<h4>Dashboard</h4>
+							<p>I want to put Leaflet Map here</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="well">
+							<h4>Stats</h4>
+							<p>1 Million</p> 
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="well">
+							<h4>Review Rank</h4>
+							<p>100 Million</p> 
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="well">
+							<h4>Helped Count</h4>
+							<p>10 Million</p> 
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="well">
+							<h4>Success Rate</h4>
+							<p>30%</p> 
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="well">
+								<h4>About {{getProfile.username}}</h4>
+								<p>Email: {{getProfile.email}}</p>  
+							</div>
+						</div>
+						<div class="col-sm-8">
+							<div class="well">
+								<h4>{{getProfile.username}}'s Events</h4>
+								<hr>
+								
+								<ul class="list-group">
+									{{#each getMyEventList}}
+									<li class="list-group-item">{{event_name}}</li>
+									{{/each}}	
+								</ul>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+

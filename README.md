@@ -1,1 +1,2 @@
-# world_itinerary
+# skeleton
+starting point for my applications

@@ -1,0 +1,77 @@
+<template name="main">
+<header>
+<nav class="navbar navbar-default">
+	<div class="container-fluid" id="header">
+		<div class="navbar-header" >
+			<a href="/" class="logo"><img src="/img/logo.png" /></a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-list fa-1x" aria-hidden="true" ></i></a>
+				<ul class="dropdown-menu">
+				<li><a href="/home"><i class="fa fa-fw fa-tachometer"></i>Home</a></li>
+				<li role="separator" class="divider"></li>
+				<li><a href="#" class="help"><i class="fa fa-question-circle fa-fw" aria-hidden="true"></i> Help</a></li>
+				</ul>
+			</li>
+		</ul>
+		<form class="navbar-form navbar-left">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search World">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">
+					<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</span>
+			</div>
+		</form>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#"><i class="fa fa-bell fa-fw" aria-hidden="true"></i></a></li>
+			<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span></a>
+			<ul class="dropdown-menu">
+				<li role="separator" class="divider"></li>
+				<li class="dropdown-header">{{#if currentUser}}{{getUser.email}}{{else}}NoUser{{/if}}</li>
+				<li role="separator" class="divider"></li>
+				<li><a href="/profile/{{#if currentUser}}{{getUser.username}}{{else}}NoUser{{/if}}"><i class="fa fa-pencil-square-o fa-1x" aria-hidden="true"></i> Profile</a></li>
+				<li><a href="#" class="settings"><i class="fa fa-cog fa-1x" aria-hidden="true"></i> Settings</a></li>
+				<li><a href="#" class="logout"><i class="fa fa-sign-out fa-1x"></i>Logout</a></li>
+			</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+</header>
+
+<body>
+ 
+  <!--DO NT HAVE MAIL VERIFICATION SETUP YET
+  {{#unless currentUser.emails.[0].verified}}
+    <p class="alert alert-success">You need to verify your email address before using WorldItinerary. <a href="#" class="resend-verification">Resend verification</a>.</p>
+  {{else}} 
+	{{> yield}}
+  {{/unless}}
+  -->
+<div class="container-fluid text-center">   
+	<div class="row content">
+		<div class="col-sm-2 sidenav">
+			  <ul class="nav nav-pills nav-stacked">
+				<li><a href="/">Home</a></li>
+				<li><a href="/events">Events</a></li>
+				<li><a href="/profile/{{#if currentUser}}{{getUser.username}}{{else}}NoUser{{/if}}">My Profile</a></li>
+			  </ul><br>
+		</div>
+		<div class="col-sm-10 text-left"> 
+			{{> yield}}
+		</div>
+	</div>
+</div>	
+</body>
+
+<footer>
+	{{> footer}}
+</footer>
+
+{{>modalhelp}}
+{{>modalsettings}}
+</template>
